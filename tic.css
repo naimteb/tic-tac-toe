@@ -1,0 +1,45 @@
+* {
+  background-color: brown;
+}
+.container {
+  padding: 40px;
+  height: 100vh; /*to make a div cover the full screen.*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /*tems are placed vertically, from top to bottom.*/
+}
+#board {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap; /*lex items stay on one line or wrap onto multiple lines if they exceed the container's width.*/
+  margin-top: 40px;
+}
+.box {
+  height: 150px;
+  width: 150px;
+  border-right: 8px solid;
+  border-bottom: 8px solid;
+  display: flex;
+  color: rgb(8, 8, 23);
+  justify-content: center;
+  align-items: center;
+}
+.box:nth-child(3n) {
+  border-right: none;
+}
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+#restartBtn {
+  width: 90px;
+  height: 30px;
+  border-radius: 25%;
+  background-color: rgb(83, 83, 98);
+  border: solid;
+  transition: 200ms;
+}
+#restartBtn:hover {
+  cursor: pointer;
+  transform: translateY(2px);
+}
