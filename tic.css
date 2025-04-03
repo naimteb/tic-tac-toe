@@ -10,7 +10,7 @@
   flex-direction: column; /*tems are placed vertically, from top to bottom.*/
 }
 #board {
-  width: 500px;
+  width: 466px;
   display: flex;
   flex-wrap: wrap; /*lex items stay on one line or wrap onto multiple lines if they exceed the container's width.*/
   margin-top: 40px;
@@ -24,20 +24,31 @@
   color: rgb(8, 8, 23);
   justify-content: center;
   align-items: center;
+  font-size: 80px;
+  font-weight: bold;
 }
-.box:nth-child(3n) {
+/* .box:nth-child(3n) {
   border-right: none;
-}
+} */
 .box:nth-child(6) ~ .box {
   border-bottom: none;
 }
+#\32,
+#\35,
+#\38 {
+  border-right: none;
+}
+/* }                      \32 is the Unicode escape for 2
+\35 is the Unicode escape for 5
+\38 is the Unicode escape for 8 */
+
 #restartBtn {
   width: 90px;
   height: 30px;
   border-radius: 25%;
   background-color: rgb(83, 83, 98);
   border: solid;
-  transition: 200ms;
+  transition: 200ms ease-in-out;
 }
 #restartBtn:hover {
   cursor: pointer;
